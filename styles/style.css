@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(../images/pexels-eberhard-grossgasteiger-1612351.jpg);
+  background-size: cover;
+  font-family: lato;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s ease-out;
+}
+.main_wrapper {
+  width: max-content;
+  text-align: center;
+}
+.main_header {
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 37px;
+  margin-bottom: 50px;
+}
+.modal_anchor:link,
+.modal_anchor:visited {
+  display: inline-block;
+  width: 400px;
+  height: 46px;
+  background-color: #4276b1;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  line-height: 46px; /* Set line-height equal to height */
+  font-size: 20px;
+  text-transform: capitalize;
+  transition: all 0.5s ease-out;
+}
+.modal_anchor:hover {
+  background-color: #355e8e;
+}
+.modal_anchor:active {
+  transform: scale(0.95);
+}
+.p-absolute {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 180px;
+  transition: all 0.5s ease-out;
+  animation: getBig 500ms ease-out;
+}
+.popup_box {
+  background-color: rgb(255, 255, 255);
+  width: 980px;
+  height: 430px;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+}
+.popup_text {
+  line-height: 55px;
+}
+.popup_button {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+
+@keyframes getBig {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes getSmall {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
